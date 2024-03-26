@@ -106,20 +106,30 @@ let newObjects = people.map(p => {
 console.log('--New Object--');
 console.log(newObjects);
 
+// Sort by Person properties in people array
+
+// Sort oldest to youngest
+people.sort((a, b) => a.dateOfBirth - b.dateOfBirth);
+
+console.log('--Sort people oldest to youngest--');
+
+console.log(people);
+
+console.log('--Sort people youngest to oldest--');
+
+people.sort((a, b) => b.dateOfBirth - a.dateOfBirth);
+
+console.log(people);
+
+// Sort by string prop Last Name
+console.log('-- Sort last name asc--');
+
+people.sort((a, b) => a.lastName < b.lastName ? -1 : 1);
 
 
+console.log('-- Sort last name desc--');
 
+people.sort((a, b) => a.lastName < b.lastName ? 1 : -1);
 
+console.log(people);
 
-/*if(now.getMonth() < this.dateOfBirth.getMonth()){
-           
-            if(now.getDate() < this.dateOfBirth.getDate()){
-                yearsOfAge -= 1;
-            }
-            else{
-                yearsOfAge = now.getFullYear() - this.dateOfBirth.getFullYear()-1 ;
-            }
-        }
-        else{
-            yearsOfAge = now.getFullYear() - this.dateOfBirth.getFullYear()-1 ;
-        }*/
